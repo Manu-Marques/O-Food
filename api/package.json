@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/index.js",
+    "dev_debug": "DEBUG=App,User_Controller,Index_Router,User_DataMapper,Error_Handler,Router_Wrapper,Validator,Middleware_JWT,Authenticated,Auth_local_storage,Meal_Controller,Recipe_Controller,SpecificDiet_Controller,Meals_DataMapper,Recipes_DataMapper,SpecificDiet_DataMapper,User_Routes nodemon ./src/index.js",
+    "prod": "pm2-runtime pm2.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^6.3.1",
+    "nodemon": "^2.0.6",
+    "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "jest": "^28.0.3"
+  }
+}

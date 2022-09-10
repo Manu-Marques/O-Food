@@ -1,0 +1,173 @@
+@import '../../styles/index.scss';
+
+.profile {
+    margin: 0 auto;
+    width:95%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__user-pic{
+        background-color: map-get(map-get($themes, "light"), "base3");
+        width: 6rem;
+        height: 6rem;
+        border-radius: 5rem;
+        margin: 1rem 0;
+    }
+}
+
+.profilForm {
+    margin: 2rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 40px 8px rgba(0, 0, 0, 0.1);
+
+    &__legend{
+        font-size: 1.8rem;
+        text-decoration: underline;
+    }
+
+    &__fieldset{
+        margin: 1rem;
+        border-left: 1px solid map-get(map-get($themes, "light"), "base2");
+        padding: 0 1rem;
+        
+    }
+
+    &__subtitle{
+        &--raspberry{
+            margin: 1rem 0;
+            color: map-get(map-get($themes, "light"), "base2");
+        }
+    }
+
+    &__inputBx {
+        display: flex;
+        flex-direction: column;
+        
+        &--selectBx{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &--gender{
+          margin: 1rem 0;
+          display: flex;
+          
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        margin: 0 1rem;
+
+        &--option{
+            margin: 0 1rem 1rem 0;
+            width: 33%;
+
+    @media (max-width: $desktop_width) { 
+
+      margin: 0 1rem 1rem 1rem;
+      width: 35%;
+  
+  }
+        }
+    }
+
+    &__input{
+        border: none;
+        width: 50%;
+        margin: 1rem 0;
+        padding: 0.8rem;
+        border-radius: 5px;
+        background-color: map-get(map-get($themes, "light"), "base6");
+
+        &--option{
+            margin: 0 0.3rem;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            background-color: map-get(map-get($themes, "light"), "base3");
+            @media (max-width: $desktop_width) { 
+
+              margin-right: 15px;
+          
+          }
+        }
+
+        &--radio{
+          margin: 1rem 0.5rem 1rem 0;
+        }
+    }
+
+    &__button{
+        width: 15rem;
+        height: 3.5rem;
+        border: 0;
+        margin: 1rem auto;
+        padding: 1rem 5rem;
+        background-color: map-get(map-get($themes, "light"), "base1");
+        border-radius: 2rem;
+        color: map-get(map-get($themes, "light"), "base0");
+        text-align: center;
+        font-size: 1.2rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        
+        &--dashboard{
+          background-color: map-get(map-get($themes, "light"), "base2");
+        }
+
+        &--forbidden{
+          color: black;
+          background-color: map-get(map-get($themes, "light"), "base7");
+          box-shadow: none;
+          opacity: 0.5;
+          cursor: auto;
+        }
+    }
+
+    &__button:hover{
+      width: 15rem;
+      height: 3.5rem;
+      border: 0;
+      margin: 1rem auto;
+      padding: 1rem 5rem;
+      background-color: map-get(map-get($themes, "light"), "base8");
+      border-radius: 2rem;
+      color: map-get(map-get($themes, "light"), "base0");
+      text-align: center;
+      font-size: 1.2rem;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: 1s;
+      
+      &--dashboard{
+        background-color: map-get(map-get($themes, "light"), "base2");
+      }
+
+      &--forbidden{
+        color: black;
+        background-color:map-get(map-get($themes, "light"), "base7");
+        box-shadow: none;
+        opacity: 0.5;
+        cursor: auto;
+      }
+  }
+
+    @media (max-width: $desktop_width) { 
+
+      margin: 0px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 1rem;
+      box-shadow: 0px 4px 40px 8px rgba(0, 0, 0, 0.1);
+  
+  }
+
+}

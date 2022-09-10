@@ -1,0 +1,150 @@
+@import '../../styles/index.scss';
+
+.form {
+ 
+&__register {
+  width: 21em;
+
+}
+
+&__checkbox {
+  display: flex;
+  align-items: center;
+  padding-top: 0.7em;
+}
+
+&__cgu {
+font-size: small;
+padding : 1em 0 0 0.6em;
+font-style: italic;
+}
+
+&__email {
+  padding-bottom: 5px;
+  display: block;
+}
+
+&__password {
+  padding: 1.2em 0 5px;
+  display: block;
+}
+
+&__alreadyRegister {
+  padding: 1em 0 0 1.8em;
+  font-style: italic;
+  font-weight: 500;
+}
+
+&__log {
+  text-decoration: underline;
+}
+&__log:hover {
+  text-decoration: underline;
+  color: map-get(map-get($themes, "light"), "base1");
+  transition: 1s;
+}
+
+&__texte {
+  background-color: map-get(map-get($themes, "light"), "base0");
+  font-style: italic;
+  box-shadow: 0 4px 15px 5px rgb(0 0 0 / 5%);
+  padding: 3em;
+  font-size: 16px;
+  line-height: 30px;
+  width: 25em;
+  margin-left: 27em;
+  color: map-get(map-get($themes, "light"), "base1");
+  @media screen and (max-width: $desktop_width) {
+    background-color: map-get(map-get($themes, "light"), "base0");
+    box-shadow: 0 4px 15px 5px rgb(0 0 0 / 5%);
+    padding: 3em;
+    width: 100%;
+    margin-left: 0em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: map-get(map-get($themes, "light"), "base1");
+  }
+}
+
+&__registerSubmit {
+  width: 260px;
+  padding: 15px;
+  background: map-get(map-get($themes, "light"), "base1");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: map-get(map-get($themes, "light"), "base0");
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+&__registerSubmit:hover {
+  width: 260px;
+  padding: 15px;
+  background-color: map-get(map-get($themes, "light"), "base8");
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  color: map-get(map-get($themes, "light"), "base0");
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin-top: 15px; 
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+&__creatAccount {
+  padding-top: 1em;
+  font-weight: 400;
+  font-size: 21px;
+  color: map-get(map-get($themes, "light"), "base5");
+
+}
+
+}
+
+.register {
+  width: 900px;
+  margin: 0 auto; // test pour push notre footer en bas de page sans affecter les autres pages --> remplace : 0 auto 0
+  background-color : map-get(map-get($themes, "light"), "base4");
+  padding: 1rem;
+  padding-bottom: 8rem;
+  height: 75vh;
+  @media screen and (max-width: $desktop_width) {
+    width: 90%;
+    height: 500px;
+    margin: 0 auto 8rem; // test pour push notre footer en bas de page sans affecter les autres pages --> remplace : 0 auto 0
+    background-color : map-get(map-get($themes, "light"), "base4");
+    padding: 1rem;
+  }
+}
+
+#fname, #pwd {
+  height: 25px;
+  border: none;
+  background-color: map-get(map-get($themes, "light"), "base6");
+  width: 100%;
+}
+
+.form-control {
+
+  background-color: map-get(map-get($themes, "light"), "base6");
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  width: 90%;
+  padding-left: 10px;
+  font-weight: 300;
+}
+
+.alert {
+
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  color: map-get(map-get($themes, "light"), "base2");
+}

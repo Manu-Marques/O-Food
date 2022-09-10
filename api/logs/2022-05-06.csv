@@ -1,0 +1,6 @@
+13:37:09,/login,ValidationError: "password" is required
+The passed object doesn't fit with the required format.
+13:41:23,404,Credentials don't match, please retry.
+13:46:35,/signup,error: duplicate key value violates unique constraint "users_email_key"
+15:43:48,404,This recipe is still not saved in base.
+16:39:21,/signup,error: permission denied for table users

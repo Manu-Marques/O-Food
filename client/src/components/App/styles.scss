@@ -1,0 +1,29 @@
+@import '../../styles/index.scss';
+
+.app {
+
+  width: 900px;
+  min-height: 100vh;
+  display: block;
+  margin: auto;
+  position: relative;
+
+  @media (max-width: $desktop_width) {
+
+    width: 100%;
+
+  }
+}
+
+.message__intro {
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  width: 250px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 150px;
+}

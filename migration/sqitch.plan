@@ -1,0 +1,10 @@
+%syntax-version=1.0.0
+%project=ofood
+
+1.init 2022-05-07T10:10:09Z Nicolas,,, <nicolas@FX705GE> # structure projet
+2.add.seeding 2022-05-07T10:10:10Z Nicolas,,, <nicolas@FX705GE> # add.seeding
+3.add.script_create_meals 2022-05-09T11:24:05Z Nicolas,,, <nicolas@FX705GE> # 3.add.script_create_meals
+
+4.add.script_create_meals_version_2 2022-05-12T11:38:33Z Nicolas,,, <nicolas@FX705GE> # 4.add.script_create_meals_version_2
+5.add.script_create_meals_version_3 2022-05-12T18:15:43Z Nicolas,,, <nicolas@FX705GE> # 5.add.script_create_meals_version_3
+6.add.script_recipesBy_IntolerancesAnd_Imc 2022-05-22T08:42:39Z Nicolas,,, <nicolas@FX705GE> # 6.add.script_recipesBy_IntolerancesAnd_Imc

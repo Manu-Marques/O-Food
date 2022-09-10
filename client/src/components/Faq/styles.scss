@@ -1,0 +1,96 @@
+@import '../../styles/index.scss';
+
+
+.faq { 
+  border-radius: 25px;
+  padding: 25px;
+  height: 78vh;
+  @media (max-width: $desktop_width) {
+    margin : auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+&__heading{
+  font-size: 30px;
+  font-weight: 500;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+&__detail {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  margin: 20px 0 0 0;
+  padding: 5px 0 20px 0;
+}
+
+&__summary:hover,
+&__summary:active { 
+
+  cursor: pointer; 
+}
+
+&__summary {
+  list-style: none;
+}
+
+&__summary::-webkit-details-marker {
+  display: none;
+}
+
+&__summary { 
+  display: block;
+  padding: 0;
+  position: relative;
+  text-align: right;
+}
+
+  
+&__summary:after {
+  display: inline-block;
+  content: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  text-align: right;
+  padding-bottom: 20px;
+}
+
+details[open] &__summary:after {
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  content: "";
+  background-image: url("https://bobmatyas.github.io/fm-faq-accordion/images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center right;
+  transform:scaleY(-1);
+}
+
+&__question {
+  left: 0;
+  position: absolute;
+  text-align: left;
+  top: 0;
+  width: 90%;
+}
+
+&__question {
+  display: inline-block;
+  margin: 5px 0;
+  text-align: left;
+  width: 90%;
+}
+
+&__summary {
+  font-size: 16px; 
+}
+
+&__text {
+  color : map-get(map-get($themes, "light"), "base1");
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px 0 0 0;
+}
+
+}

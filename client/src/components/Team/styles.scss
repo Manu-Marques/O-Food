@@ -1,0 +1,138 @@
+@import '../../styles/index.scss';
+
+.team__container {
+
+  min-height: 75vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.team__heading {
+
+  font-size: 31px;
+  font-weight: 300;
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.first_line {
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.second_line {
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  @media (max-width: $desktop_width) {
+
+    margin-top: 0px;
+  }
+}
+
+.card_team {
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+}
+
+.card_team:hover {
+
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  transition: 1s;
+}
+
+.img__container {
+
+  max-height: 217px;
+
+}
+
+.img__avatar {
+
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 0px 0px;
+  object-fit: cover;
+}
+
+.desc__container {
+
+  padding: 15px;
+  width: 100%;
+}
+
+.name__team {
+
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.role__team {
+
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 20px;
+  padding-bottom: 30px;
+}
+
+.link__git {
+
+  width: 25%;
+  @media (max-width: $desktop_width) {
+
+    width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.img__1 {
+
+  margin-left: 18%;
+
+  @media (max-width: $desktop_width) {
+
+    margin: auto;
+    margin-bottom: 30px;
+  }
+
+}
+
+.img__2 {
+
+  margin-left: 13%;
+
+  @media (max-width: $desktop_width) {
+
+    margin: auto;
+  }
+  
+}

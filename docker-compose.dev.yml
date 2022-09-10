@@ -1,0 +1,86 @@
+version: "3.8"
+services:
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.dev
+    volumes:
+      - type: bind
+        source: ./client
+        target: /app
+      - type: volume
+        target: /app/node_modules
+    # ports:
+    #   - 3000:3000 # ici c'est pour povoir interargir depuis le host, (pas nécessaire si reverse-proxy en route)
+
+    depends_on: 
+      - api
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    environment:
+    # si on a pg_conf c'est qu'on est en environnement de dev
+      - NODE_ENV=pg_conf
+      - DOCKER_ENV=true
+      # passer les variables POSTGRES PAR .env 
+    env_file:
+      - ./api/.env
+
+    volumes:
+      - type: bind
+        source: ./api/src
+        target: /app/src
+    # ports:
+      # - 3001:80 # ici c'est pour povoir interargir depuis le host, (pas nécessaire si reverse-proxy en route)
+
+    depends_on: 
+      - postgresql
+
+
+  postgresql :
+
+    image: postgres:latest
+    environment:
+    - POSTGRES_USER=ofood
+    - POSTGRES_PASSWORD=ofoodpassword
+    - POSTGRES_DB=ofood
+
+    ports:
+    - 54320:5432
+
+    # # volumes:
+    # # - type: bind
+    # #   source: ./postgres_data
+    # #   target: /var/lib/postgresql/
+
+    volumes:
+    - type: volume
+      source: db_prod_postgres_ofood
+      target: /var/lib/postgresql/data
+
+    # # - type: bind
+    # #   source: ./setup.sh
+    # #   target: /docker-entrypoint-initdb.d/initdb.sh
+
+
+
+  reverse-proxy:
+    build:
+      context: ./reverse-proxy
+      dockerfile: Dockerfile.dev
+    ports:
+      - 80:80
+    depends_on:
+      - postgresql
+      - api
+      - client
+
+
+
+volumes:
+# A voir avec l'équipe comment elle veut gérer la persistance ?
+  db_prod_postgres_ofood:
+      external: true

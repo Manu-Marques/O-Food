@@ -1,0 +1,43 @@
+@import '../../styles/index.scss';
+
+.container {
+  display: block;
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    @media (max-width: $desktop_width) {
+      margin : auto;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+.cgu {
+  font-weight: 500;
+  padding-bottom: 50px;
+  text-align: center;
+  color : map-get(map-get($themes, "light"), "base1");
+
+
+&__title{
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+&__text {
+    padding-bottom: 30px;
+    line-height: 23px;
+  }
+
+&__subtitle {
+  color: map-get(map-get($themes, "light"), "base1");
+  font-weight: bolder;
+}
+
+&__bold {
+  font-weight: 600;
+}
+
+
+}
+

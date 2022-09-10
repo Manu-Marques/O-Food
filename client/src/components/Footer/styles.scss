@@ -1,0 +1,64 @@
+@import '../../styles/index.scss';
+
+.footer {
+    max-width: 900px;
+    min-width: 900px;
+    height: 150px;
+    background-color: map-get(map-get($themes, "light"), "base5");
+    bottom: 0;
+    // position: absolute;
+    color : map-get(map-get($themes, "light"), "base0");
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 500;
+  }
+
+  &__mediaList{
+    display: flex;
+  }
+
+  &__media-link {
+    border-radius: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__media-icons{
+    width: 1.5rem;
+    margin-right: 1rem;
+    fill: map-get(map-get($themes, "light"), "base4");
+    &:hover{
+      fill: map-get(map-get($themes, "light"), "base1");
+    }
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    &:hover{
+      color: map-get(map-get($themes, "light"), "base1");
+    }
+  }
+
+@media (max-width: $desktop_width) { 
+
+  max-width: 100%;
+  min-width: 100%;
+  height: 150px;
+  background-color: map-get(map-get($themes, "light"), "base5");
+  bottom: 0;
+  color : map-get(map-get($themes, "light"), "base0");
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  padding-right: 50px;
+
+}
+}
+
